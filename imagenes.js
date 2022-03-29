@@ -1,21 +1,21 @@
 class Imagenes{
     constructor(pantalla){
         this.pantalla = pantalla;
-        this.menu = loadImage('/imagenes/Menu.jpg');
-        this.primeraPagina = loadImage('/imagenes/primeraPagina.png');
+        this.menu = loadImage('/Images/Menu.jpg');
+        this.primeraPagina = loadImage('/Images/PimeraPagina.png');
         this.boton = new Botones({
             x: 710,
             y: 645,
             b: 345,
             h: 213,
-            image: loadImage('/imangenes/Songs.png')
+            image: loadImage('/Images/Songs.png')
         })
         this.boton1 = new Botones({
             x: 1085,
             y: 460,
             b: 320,
             h: 320,
-            image: loadImage('/imagenes/Playlist.png')
+            image: loadImage('/Images/Playlist.png')
         })
     }
 

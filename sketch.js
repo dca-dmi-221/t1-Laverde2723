@@ -1,9 +1,14 @@
 let imagenes;
 let pantalla = 0;
 
+function preload(){
+  menu = loadImage('image')
+}
+
 function setup() {
   createCanvas(1220, 720);
   imagenes = new Imagenes(pantalla);
+  
 }
 
 function draw() {
@@ -12,7 +17,7 @@ function draw() {
   imagenes.pantalla1();
 }
 
-function mousePressed(){
+/*function mousePressed(){
   imagenes.click(mouseX, mouseY);
-}
+}*/
 
