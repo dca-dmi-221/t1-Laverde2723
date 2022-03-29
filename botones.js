@@ -11,10 +11,10 @@ class Botones{
     show(){
         image(this.image, this.x, this.y);
     }
-    cli(mx, my){
-        return distancia(mx, my, this.x, this.y,) < this.b/2;
+    cli(mouseX, mouseY){
+        return distancia(mouseX, mouseY, this.x, this.y,) < this.b/2;
     }
-    cli2(mx, my){
-        return mx > this.x && mx < (this.x + this.b) && my > this.y && my < (this.y + this.h);
+    cli2(mouseX, mouseY){
+        return mouseX > this.x && mouseX < (this.x + this.b) && mouseY > this.y && mouseY < (this.y + this.h);
     }
 }
