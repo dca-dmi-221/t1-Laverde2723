@@ -12,7 +12,7 @@ class Botones{
         image(this.image, this.x, this.y);
     }
     cli(mouseX, mouseY){
-        return distancia(mouseX, mouseY, this.x, this.y,) < this.b/2;
+        return dist(mouseX, mouseY, this.x, this.y,) < this.b/2;
     }
     cli2(mouseX, mouseY){
         return mouseX > this.x && mouseX < (this.x + this.b) && mouseY > this.y && mouseY < (this.y + this.h);

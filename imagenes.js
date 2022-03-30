@@ -31,20 +31,22 @@ class Imagenes{
 
     pantalla1(){
         if(this.pantalla === 1){
-            image(this.primeraPagina, 0, 0);
+            image(this.primeraPagina, 600, 360);
             imageMode(CENTER);
-
+            fill(255,255,255);
+            text("¿Qué quieres escoger");
+            
         }
     }
 
     click(mouseX, mouseY){
         if(this.pantalla === 0){
             if(this.boton.cli(mouseX, mouseY)){
-                this.pantalla = 1;
+                this.pantalla = 2;
                 console.log("click")
             }
             if(this.boton1.cli(mouseX, mouseY)){
-                this.pantalla = 2;
+                this.pantalla = 1;
             }
         }
     }
