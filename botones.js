@@ -18,3 +18,4 @@ class Botones{
         return mouseX > this.x && mouseX < (this.x + this.b) && mouseY > this.y && mouseY < (this.y + this.h);
     }
 }
+
