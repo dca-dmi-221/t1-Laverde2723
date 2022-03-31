@@ -1,5 +1,5 @@
 let imagenes;
-let pantalla = 0;
+let pantalla = 1;
 
 
 function preload(){
@@ -13,8 +13,10 @@ function setup() {
 
 function draw() {
   background(0);
-  imagenes.pantalla0();
   imagenes.pantalla1();
+  imagenes.pantalla2();
+  imagenes.pantalla3();
+  imagenes.pantalla4();
 }
 
 function mousePressed(){
