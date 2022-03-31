@@ -4,16 +4,17 @@ class Imagenes{
         this.menu = loadImage('./Images/Menu.jpg');
         this.primeraPagina = loadImage('./Images/PrimeraPagina.png');
         this.segundaPagina = loadImage('./images/SegundaPagina.png');
+        this.caciones = loadImage('./images/Canciones.png')
         this.terceraPagina = loadImage('./images/TerceraPagina.png');
         this.boton0 = new Botones({
-            x: 500,
+            x: 459,
             y: 600,
             b: 60,
             h: 20,
             image: loadImage('./Images/Songs.png')
         })
         this.boton1 = new Botones({
-            x: 750,
+            x: 782,
             y: 600,
             b: 50,
             h: 20,
@@ -69,7 +70,19 @@ class Imagenes{
         }
     }
 
+    pantalla5(){
+        if(this.pantalla === 5){
+            image(this.caciones, 600, 360);
+            imageMode(CENTER)
+        }
+    }
+
     click(mouseX, mouseY){
+        if(this.pantalla === 1){
+            if(this.boton0.cli(mouseX, mouseY)){
+                this.pantalla = 5;
+            }
+        }
         if(this.pantalla === 1){
             if(this.boton1.cli(mouseX, mouseY)){
                 this.pantalla = 2;

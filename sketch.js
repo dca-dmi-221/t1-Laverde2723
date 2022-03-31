@@ -17,6 +17,7 @@ function draw() {
   imagenes.pantalla2();
   imagenes.pantalla3();
   imagenes.pantalla4();
+  imagenes.pantalla5();
 }
 
 function mousePressed(){
