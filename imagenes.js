@@ -34,6 +34,13 @@ class Imagenes{
             h: 300,
             image: loadImage('./images/Flash2.png')
         })
+        this.devolver = new Botones({
+            x: 1125,
+            y: 129,
+            b: 500,
+            h: 500,
+            image: loadImage('./images/Devolver.png')
+        })
     }
 
     pantalla1(){
@@ -52,6 +59,7 @@ class Imagenes{
             imageMode(CENTER);
             this.boton2.show();
             this.boton3.show();
+            this.devolver.show();
             
         }
     }
@@ -59,6 +67,7 @@ class Imagenes{
     pantalla3(){
         if(this.pantalla === 3){
             image(this.segundaPagina, 600, 360);
+            this.devolver.show();
             imageMode(CENTER);
         }
     }
@@ -66,6 +75,7 @@ class Imagenes{
     pantalla4(){
         if(this.pantalla === 4){
             image(this.terceraPagina, 600, 360);
+            this.devolver.show();
             imageMode(CENTER);
         }
     }
@@ -73,6 +83,7 @@ class Imagenes{
     pantalla5(){
         if(this.pantalla === 5){
             image(this.caciones, 600, 360);
+            this.devolver.show();
             imageMode(CENTER)
         }
     }
@@ -94,6 +105,24 @@ class Imagenes{
             }
             if(this.boton2.cli(mouseX, mouseY)){
                 this.pantalla = 4;
+            }
+            if(this.devolver.cli(mouseX, mouseY)){
+                this.pantalla = 1
+            }
+        }
+        if(this.pantalla === 3){
+            if(this.devolver.cli(mouseX, mouseY)){
+                this.pantalla = 2
+            }
+        }
+        if(this.pantalla === 4){
+            if(this.devolver.cli(mouseX, mouseY)){
+                this.pantalla = 2
+            }
+        }
+        if(this.pantalla === 5){
+            if(this.devolver.cli(mouseX, mouseY)){
+                this.pantalla = 1
             }
         }
     }
