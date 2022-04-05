@@ -4,7 +4,7 @@ class Imagenes{
         this.menu = loadImage('./Images/Menu.jpg');
         this.primeraPagina = loadImage('./Images/PrimeraPagina.png');
         this.segundaPagina = loadImage('./images/SegundaPagina.png');
-        this.caciones = loadImage('./images/Canciones.png')
+        this.canciones = loadImage('./images/Canciones.png')
         this.terceraPagina = loadImage('./images/TerceraPagina.png');
         this.boton0 = new Botones({
             x: 459,
@@ -41,6 +41,28 @@ class Imagenes{
             h: 50,
             image: loadImage('./images/Devolver.png')
         })
+        this.reproducir = new Botones({
+            x: 610,
+            y: 635,
+            b: 30,
+            h: 45,
+            image: loadImage('./images/Reproducir.png')
+        })
+        this.avanzar1 = new Botones({
+            x: 650,
+            y: 635,
+            b: 32,
+            h: 65,
+            image: loadImage('./images/Avanzar1.png')
+        })
+        this.avanzar2 = new Botones({
+            x: 567,
+            y: 635,
+            b: 32,
+            h: 65,
+            image: loadImage('./images/Avanzar2.png')
+            
+        })
     }
 
     pantalla1(){
@@ -68,10 +90,9 @@ class Imagenes{
         if(this.pantalla === 3){
             image(this.segundaPagina, 600, 360);
             this.devolver.show();
-            this.boton3.show();
-            this.boton3.show();
-            this.boton3.show();
-            this.boton3.show();
+            this.avanzar2.show();
+            this.avanzar1.show();
+            this.reproducir.show();
             imageMode(CENTER);
         }
     }
@@ -79,6 +100,9 @@ class Imagenes{
     pantalla4(){
         if(this.pantalla === 4){
             image(this.terceraPagina, 600, 360);
+            this.avanzar2.show();
+            this.avanzar1.show();
+            this.reproducir.show();
             this.devolver.show();
             imageMode(CENTER);
         }
@@ -86,8 +110,11 @@ class Imagenes{
 
     pantalla5(){
         if(this.pantalla === 5){
-            image(this.caciones, 600, 360);
+            image(this.canciones, 600, 360);
             this.devolver.show();
+            this.avanzar2.show();
+            this.avanzar1.show();
+            this.reproducir.show();
             imageMode(CENTER)
         }
     }
