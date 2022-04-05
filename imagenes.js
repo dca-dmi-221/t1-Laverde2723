@@ -37,8 +37,8 @@ class Imagenes{
         this.devolver = new Botones({
             x: 1125,
             y: 129,
-            b: 500,
-            h: 500,
+            b: 50,
+            h: 50,
             image: loadImage('./images/Devolver.png')
         })
     }
@@ -68,6 +68,10 @@ class Imagenes{
         if(this.pantalla === 3){
             image(this.segundaPagina, 600, 360);
             this.devolver.show();
+            this.boton3.show();
+            this.boton3.show();
+            this.boton3.show();
+            this.boton3.show();
             imageMode(CENTER);
         }
     }
