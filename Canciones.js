@@ -1,8 +1,10 @@
 class Canciones{
-    constructor(nombre, autor, archivo){
+    constructor(nombre, autor, duracion){
         this.nombre = nombre;
-        this.duracion = autor;
-        this.archivo = archivo;
+        this.autor = autor;
+        this.duracion = duracion;
     }
-    
+
+
+
 }

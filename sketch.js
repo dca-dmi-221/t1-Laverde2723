@@ -1,17 +1,23 @@
 let imagenes;
-let pantalla = 1;
-let songs;
+let pantalla = 3;
+let playlist = []
 let slider;
 
 function preload(){
-  songs = loadSound("./Songs/SiVeoATuMama.mp3");
-  songs = loadSound("./Songs/258.mp3");
-  songs = loadSound("./Songs/Bichiyal.mp3");
-  songs = loadSound("./Songs/LaZona.mp3");
-  songs = loadSound("./Songs/120.mp3");
-  songs = loadSound("./Songs/YoVistoAsi.mp3");
-  songs = loadSound("./Songs/HaciendoQueMeAmas.mp3");
-  songs = loadSound("./Songs/TeDeseoLoMejor.mp3");
+
+  playlist.push(new Playlist('YHLQMDLG'))
+  playlist.push(new Playlist('EL ULTIMO TOUR DEL MUNDO'))
+
+  playlist[0].songs.push(new Canciones("Si veo a tu mama", "Bad bunny", 173));
+  playlist[0].songs.push(new Canciones("25/8", "Bad bunny", 244));
+  playlist[0].songs.push(new Canciones("Bichiyal", "Bad bunny", 197));
+  playlist[0].songs.push(new Canciones("La Zona", "Bad bunny", 137));
+
+  playlist[1].songs.push(new Canciones("120", "Bad bunny", 152));
+  playlist[1].songs.push(new Canciones("Yo visto asi", "Bad bunny", 224));
+  playlist[1].songs.push(new Canciones("Haciendo que me amas", "Bad bunny", 218));
+  playlist[1].songs.push(new Canciones("Te deseo lo mejor", "Bad bunny", 140));
+
 }
 
 
@@ -20,7 +26,6 @@ function setup() {
   imagenes = new Imagenes(pantalla);
   slider = createSlider(0, 1, 0, 0.01);
   slider.position(1000,650);
-  songs.stop();
 }
 
  
@@ -28,13 +33,11 @@ function draw() {
   background(0);
   imagenes.pantalla1();
   imagenes.pantalla2();
-  imagenes.pantalla3();
+  imagenes.pantalla3(playlist);
   imagenes.pantalla4();
   imagenes.pantalla5();
-  songs.setVolume(slider.value());
 }
 
 function mousePressed(){
   imagenes.click(mouseX, mouseY);
-
 }

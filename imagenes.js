@@ -9,15 +9,15 @@ class Imagenes{
         this.boton0 = new Botones({
             x: 459,
             y: 600,
-            b: 60,
-            h: 20,
+            b: 150,
+            h: 150,
             image: loadImage('./Images/Songs.png')
         })
         this.boton1 = new Botones({
             x: 782,
             y: 600,
-            b: 50,
-            h: 20,
+            b: 150,
+            h: 150,
             image: loadImage('./Images/Playlist.png')
         })
         this.boton2 = new Botones({
@@ -86,7 +86,7 @@ class Imagenes{
         }
     }
     
-    pantalla3(){
+    pantalla3(songs){
         if(this.pantalla === 3){
             image(this.segundaPagina, 600, 360);
             this.devolver.show();
@@ -94,6 +94,13 @@ class Imagenes{
             this.avanzar1.show();
             this.reproducir.show();
             imageMode(CENTER);
+            fill(255);
+            textSize(30)
+
+            for (let i = 0; i < playlist.length; i++) {
+                const song = playlist[i];
+                text(playlist[0].nombre, 500 + i*50, 300);
+            }
         }
     }
 
