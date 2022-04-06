@@ -95,11 +95,11 @@ class Imagenes{
             this.reproducir.show();
             imageMode(CENTER);
             fill(255);
-            textSize(30)
+            textSize(30);
 
-            for (let i = 0; i < playlist.length; i++) {
-                const song = playlist[i];
-                text(playlist[0].nombre, 500 + i*50, 300);
+            for (let i = 0; i < playlist[0].songs.length; i++) {
+                const song = playlist[0].songs[i];
+                //text(song.nombre, 315, (i*100), 300);
             }
         }
     }
@@ -163,5 +163,8 @@ class Imagenes{
                 this.pantalla = 1
             }
         }
+        
     }
+    
  }
+ 

@@ -1,7 +1,7 @@
 class Playlist{
-    constructor(name){
+    constructor(nombre){
         this.songs = []
-        this.name = name;
+        this.nombre = nombre;
     }
     
 }
